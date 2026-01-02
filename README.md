@@ -13,9 +13,9 @@ The system is designed to be incremental, idempotent, and easily deployable, and
 
 - **PostgreSQL**: Raw and normalized data storage
 - **ETL Layer**:
-  - API ingestion
-  - CSV ingestion
-  - Incremental checkpointing
+  - Extract --> ingestion/coinpaprika_source.py or ingestion/coingecko_source.py 
+  - Transform --> ingestion/normalize.py
+  - Load --> normalized_data table
 - **Backend API**:
   - FastAPI
   - Pagination, filtering, metadata
